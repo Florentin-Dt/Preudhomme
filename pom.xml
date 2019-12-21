@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>epsi.tma</groupId>
-    <artifactId>Command-handler</artifactId>
+    <artifactId>Order-handler</artifactId>
     <packaging>war</packaging>
     <version>1.1-SNAPSHOT</version>
-    <name>Command-handler</name>
+    <name>Order-handler</name>
     <url>http://maven.apache.org</url>
     <properties>
         <!-- Project properties -->

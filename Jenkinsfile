@@ -40,7 +40,7 @@ pipeline {
                     artifactId = pom.artifactId
                     packaging = pom.packaging
                     version = pom.version
-                    filepath = "target/${artifactId}-${version}.jar"
+                    filepath = "target/${artifactId}-${version}.war"
                     isSnapshot = version.endsWith("-SNAPSHOT")
                 }
                 echo groupId
