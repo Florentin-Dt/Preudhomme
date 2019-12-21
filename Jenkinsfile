@@ -29,7 +29,7 @@ pipeline {
     stages {
         stage('Checkout') {
            steps {
-              checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Florentin-Dt/Depot-TP1.git']]])
+              checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Florentin-Dt/Order_Handler.git']]])
            }
         }
         stage('Get info from POM') {
@@ -40,7 +40,7 @@ pipeline {
                     artifactId = pom.artifactId
                     packaging = pom.packaging
                     version = pom.version
-                    filepath = "target/${artifactId}-${version}-jar-with-dependencies.jar"
+                    filepath = "target/${artifactId}-${version}.jar"
                     isSnapshot = version.endsWith("-SNAPSHOT")
                 }
                 echo groupId
