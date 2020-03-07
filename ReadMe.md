@@ -13,6 +13,7 @@ Afin de respecter la configuration de mon Jenkinsfile, il est nécessaire de res
 
 Pré-requis: 
 - Télécharger le .war Jenkins
+- Télécharger l'executable Nexus
 - Installer le plugin Nexus plateform dans votre Jenkins
 ### Configuration serveur Nexus :
 
