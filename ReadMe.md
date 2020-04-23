@@ -7,6 +7,7 @@ Command handler is dummy project to logistic handle
 
 ### Membre du groupe : 
    - Delage Corentin
+   - Meire Valentin
    - Dekyndt Florentin
 
 Afin de respecter la configuration de mon Jenkinsfile, il est nécessaire de respecter la configuration ci-dessous.
