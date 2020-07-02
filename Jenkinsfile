@@ -1,6 +1,6 @@
 // Lien vers Nexus, doit correspondre à l'instance paramétrée dans Jenkins
 def nexusId = 'Nexus_localhost'
-
+ 
 /* *** Configuration de Nexus pour Maven ***/
 // URL de Nexus
 def nexusUrl = 'http://localhost:8081'
