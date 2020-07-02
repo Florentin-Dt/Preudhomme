@@ -84,13 +84,14 @@ pipeline {
             when { expression { isSnapshot } }
             steps {
               sh "mvn deploy:deploy-file -e -DgroupId=${groupId} -Dversion=${version} -Dpackaging=${packaging} -Durl=${nexusUrl}/repository/${nexusRepoSnapshot} -Dfile=${filepath} -DartifactId=${artifactId} -DrepositoryId=${mavenRepoId}"
-              slackSend channel: 'jenkins', color: 'good', message: 'Livrable produit et déposé dans Nexus avec succès !', teamDomain: 'preudhommegroupe', tokenCredentialId: 'jenkins-slack-notifications'
+              slackSend channel: 'jenkins', color: 'good', message: 'Livrable SNAPSHOT produit et déposé dans Nexus avec succès !', teamDomain: 'preudhommegroupe', tokenCredentialId: 'jenkins-slack-notifications'
             }
         }
         stage('Push RELEASE to Nexus') {
             when { expression { !isSnapshot } }
             steps {
                 nexusPublisher nexusInstanceId: 'Nexus_localhost', nexusRepositoryId: "${nexusRepoRelease}", packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: "${filepath}"]], mavenCoordinate: [artifactId: "${artifactId}", groupId: "${groupId}", packaging: "${packaging}", version: "${version}"]]]
+                slackSend channel: 'jenkins', color: 'good', message: 'Livrable RELEASE produit et déposé dans Nexus avec succès !', teamDomain: 'preudhommegroupe', tokenCredentialId: 'jenkins-slack-notifications'
             }
         }
     }
