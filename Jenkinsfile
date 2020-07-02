@@ -29,7 +29,7 @@ pipeline {
     stages {
         stage('Checkout') {
            steps {
-              checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Florentin-Dt/Order_Handler.git']]])
+              checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Florentin-Dt/Preudhomme.git']]])
            }
         }
         stage('Get info from POM') {
