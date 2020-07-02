@@ -5,7 +5,7 @@
     <artifactId>Order-handler</artifactId>
     <packaging>war</packaging>
     <version>1.2-SNAPSHOT</version>
-    <name>Order-handler</name>
+    <name>Preudhomme-ERP</name>
     <url>http://maven.apache.org</url>
     <properties>
         <!-- Project properties -->
